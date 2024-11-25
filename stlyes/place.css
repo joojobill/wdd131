@@ -86,12 +86,12 @@ h3 {
     gap: 8px;
 }
 @media (min-width: 640px) {
-	nav ul {
+    nav ul {
 		display: flex;
-	}
-	nav ul li {
-		flex: 1 1 100%;
-	}
+}}
+nav ul li {
+    flex: 1 1 100%;
+}
 footer {
     background-color: #d71920; 
     color: white; 
@@ -102,19 +102,18 @@ footer {
 }
 footer p {
     margin: 20px 0; 
-  }
-  
-  #currentyear {
+}
+#currentyear {
     font-size: 1.2em; 
     font-weight: bold; 
-  }
-  #lastModified {
+}
+#lastModified {
     font-size: 1em; 
     font-style: italic; 
     color: #aaa; 
-  }
+}
   
-  #currentyear:hover {
+#currentyear:hover {
     color: #ff6600; 
     cursor: pointer; 
-  }
+}
