@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --primary-color: #d71920;
+    --secondary-color: #f39c12;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -10,153 +16,171 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
+
 .header {
-    background: #d71920;
+    background: var(--primary-color);
     color: #fff;
     display: flex;
     padding: 1rem;
-}
-.header {
     margin: 0;
     font-size: 1.5rem;
     text-align: center;
 }
+
 h1 {
     font-size: 1.5rem;
     text-align: center;
 }
+
 h3 {
     text-align: center;
 }
+
 .content {
     position: static;
     text-align: left;
 }
+
 .content img {
     width: 100%;
     height: auto;
 }
+
 .box-weather {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 30px 35px;
     border-radius: 10px;
     font-size: 0.9rem;
-}
-.box-weather {
     bottom: 20%;
     right: 2%;
 }
+
 .box-weather img {
     width: 24px;
     height: 30px;
-    fill: #f39c12;
+    fill: var(--secondary-color);
     vertical-align: middle;
     margin-right: 8px;
     transition: transform 0.3s ease, fill 0.3s ease;
 }
+
 .box-weather:hover {
     transform: scale(1.2);
     fill: #e67e22;
 }
+
 .weather-data {
     padding: 16px;
     border-radius: 8px;
     margin-bottom: 16px;
-    background-color: #2ecc71; /* Green background for weather data */
-    color: #fff; /* White text for contrast */
+    background-color: #2ecc71;
+    color: #fff;
 }
+
 .weather-header {
     margin: 0 0 12px 0;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #27ae60; /* Darker green for the header */
-    position: relative; /* Make the pseudo-element position relative to this element */
+    background-color: #27ae60;
+    position: relative;
     color: #fff;
 }
+
 .weather-header::after {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
-    background-color: #fff; /* Placeholder color for visibility */
-    -webkit-mask: url('path-to-weather-icon.svg') no-repeat center;
-    mask: url('path-to-weather-icon.svg') no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
+    content: ' ';
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 @media (min-width: 1024px) {
     .weather-header::after {
-        width: 32px; /* Larger icon for large screens */
-        height: 32px;
+        font-size: 1.5rem;
+        right: -30px;
     }
 }
+
 .box-data {
     position: absolute;
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px 25px;
     border-radius: 5px;
     font-size: 0.9rem;
+    top: 20%;
+    left: 2%;
 }
+
 .box-data:hover {
     transform: scale(1.2);
     fill: beige;
 }
-.box-data {
-    top: 20%;
-    left: 2%;
-}
+
 .box-header {
     margin: 0 0 12px 0;
     padding: 8px 12px;
     border-radius: 4px;
-    background-color: #27ae60; /* Darker green for the header */
-    position: relative; /* Make the pseudo-element position relative to this element */
+    background-color: #27ae60;
+    position: relative;
     color: #fff;
-
 }
-.box-header::after {
-    content: '';
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    margin-left: 8px;
-    background-color: #fff; /* Placeholder color for visibility */
-    -webkit-mask: url('path-to-weather-icon.svg') no-repeat center;
-    mask: url('path-to-weather-icon.svg') no-repeat center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-
+.box-header::after{
+    content: ' ';
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
 @media (min-width: 640px) {
     nav ul {
         display: flex;
     }
+
+    .box-data {
+        padding: 15px 20px;
+        font-size: 0.8rem;
+    }
+
+    .box-weather {
+        padding: 15px 20px;
+        font-size: 0.8rem;
+    }
 }
+
 nav ul li {
     flex: 1 1 100%;
 }
+
 footer {
-    background-color: #d71920; 
-    color: white; 
-    padding: 30px; 
-    text-align: center; 
-    font-family: Arial, sans-serif; 
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
+
 footer p {
-    margin: 20px 0; 
+    margin: 20px 0;
 }
+
 #currentyear {
-    font-size: 1.2em; 
-    font-weight: bold; 
+    font-size: 1.2em;
+    font-weight: bold;
 }
+
 #lastModified {
-    font-size: 1em; 
-    font-style: italic; 
-    color: #aaa; 
-} 
+    font-size: 1em;
+    font-style: italic;
+    color: #aaa;
+}
+
 #currentyear:hover {
-    color: #ff6600; 
-    cursor: pointer; 
+    color: var(--secondary-color);
+    cursor: pointer;
 }
