@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styles */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Header styles */
+header {
+    background: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensures space between <h1> and nav */
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: left; /* Aligns <h1> to the left */
+}
+
+.navigation {
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.navigation a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.hamburger span {
+    background: white;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+
+/* Main content */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Section layout - three columns per row */
+section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+h2 {
+    text-align: center;
+}
+
+.temple-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    max-width: 300px;
+    text-align: center;
+}
+.temple-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; /* Adjusts layout for small screens */
+    }
+
+    .navigation {
+        display: none; /* Hide navigation by default on small screens */
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px; /* Aligns below the header */
+        left: 0;
+        padding: 1rem;
+    }
+
+    .navigation.show {
+        display: flex; /* Show navigation when the hamburger is clicked */
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    /* Change grid to one column on small screens */
+    section {
+        grid-template-columns: 1fr; /* Stack images in a single column */
+    }
+
+@media (min-width: 1200px) {
+    section {
+        grid-template-columns: repeat(5, 1fr); 
+    }
+    
+    }
+}
+footer {
+    background-color: #333; 
+    color: white; 
+    padding: 20px; 
+    text-align: center; 
+    font-family: Arial, sans-serif; 
+    margin-top: 40px; 
+  }
+   
+  footer p {
+    margin: 10px 0; 
+  }
+  
+  #currentyear {
+    font-size: 1.2em; 
+    font-weight: bold; 
+  }
+  #lastModified {
+    font-size: 1em; 
+    font-style: italic; 
+    color: #aaa; 
+  }
+  
+  #currentyear:hover {
+    color: #ff6600; 
+    cursor: pointer; 
+  }
