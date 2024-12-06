@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #006400;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+.navigation {
+    display: flex;
+    gap: 1rem;
+    text-align: center;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s ease;
+}
+
+.navigation a:hover {
+    background: #555;
+    border-radius: 5px;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+.hamburger span {
+    background: white;
+    height: 4px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s ease;
+}
+section {
+    padding: 1rem 2rem;
+    margin: 1rem 0;
+}
+h1, h2 {
+    color: #DAA520;
+    font-family: 'Playfair Display', serif;
+}
+p {
+    font-family: 'Roboto', sans-serif;
+}
+ul {
+    padding-left: 20px;
+}
+footer {
+    background-color: #006400;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+.wireframe img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    margin: 1rem 0;
+}
