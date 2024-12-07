@@ -58,9 +58,14 @@ section {
     padding: 1rem 2rem;
     margin: 1rem 0;
 }
-h1, h2 {
+h1 {
     color: #DAA520;
     font-family: 'Playfair Display', serif;
+}
+.title h2 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    
 }
 p {
     font-family: 'Roboto', sans-serif;
