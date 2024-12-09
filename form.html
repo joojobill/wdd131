@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Product Review</title>
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals Isaac Hooper Place">
     <meta name="author" content="Isaac Hooper">
     <link rel="stylesheet" href="styles/form.css">
@@ -15,23 +15,24 @@
         rel="stylesheet">
     <script src="scripts/form.js" defer></script>
 </head>
-<header>
-    <h1>Product Review</h1>
-
-</header>
 
 <body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
     <main>
         <form method="get" action="review.html">
-            <br>
-            <label for="product">Product name</label>
+            <!-- Product Name -->
+            <label for="product">Product Name</label>
             <select id="product" name="product" required>
-                <option value="disabled selected">select a Product</option>
+                <option value="" disabled selected>Select a Product</option>
             </select>
             <br><br>
 
-            <legend>Overrall Rating:</legend>
+            <!-- Overall Rating -->
             <fieldset>
+                <legend>Overall Rating:</legend>
                 <label for="rating1">1</label>
                 <input type="radio" id="rating1" name="rating" value="1" required>
                 <label for="rating2">2</label>
@@ -41,45 +42,45 @@
                 <label for="rating4">4</label>
                 <input type="radio" id="rating4" name="rating" value="4" required>
                 <label for="rating5">5</label>
-                <input type="radio" id="rating5" name="rating" value="4" required>
-
+                <input type="radio" id="rating5" name="rating" value="5" required>
             </fieldset>
             <br>
-            <label for="installation-date">Date of installation:</label>
+
+            <!-- Date of Installation -->
+            <label for="installation-date">Date of Installation:</label>
             <input type="date" id="installation-date" name="installation-date" required>
             <br><br>
 
-            <legend>Which feature did you find Useful in the product?</legend>
-            <p>(check all that apply)</p>
-
+            <!-- Useful Features -->
             <fieldset>
-                <input type="checkbox" id="feature1" name="usefull features" value="feature1">
+                <legend>Which feature did you find useful in the product?</legend>
+                <p>(Check all that apply)</p>
+                <input type="checkbox" id="feature1" name="useful-features" value="durability">
                 <label for="feature1">Durability</label>
-                <input type="checkbox" id="feature2" name="usefull features" value="feature2">
+                <input type="checkbox" id="feature2" name="useful-features" value="ease-of-use">
                 <label for="feature2">Ease of Use</label>
-                <input type="checkbox" id="feature3" name="usefull features" value="feature3">
+                <input type="checkbox" id="feature3" name="useful-features" value="performance">
                 <label for="feature3">Performance</label>
-                <input type="checkbox" id="feature4" name="usefull features" value="feature4">
+                <input type="checkbox" id="feature4" name="useful-features" value="design">
                 <label for="feature4">Design</label>
-
-
             </fieldset>
             <br>
+
+            <!-- Written Review -->
             <label for="written-review">Written Review:</label>
             <textarea id="written-review" name="written-review" rows="5" cols="40"></textarea>
             <br><br>
+
+            <!-- User Name -->
             <label for="user-name">Your Name:</label>
             <input type="text" id="user-name" name="user-name">
             <br><br>
+
+            <!-- Submit Button -->
             <input type="submit" value="Submit Review">
-
-
-
-
-
         </form>
-
     </main>
+
     <footer>
         <p><span id="currentyear">Isaac Hooper Ghana</span></p>
         <p><span id="lastModified"></span></p>
